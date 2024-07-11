@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>404Error</title>
+</head>
+
+<body>
+	<!-- エラーステータスとエラータイプを表示 -->
+	<!-- ${status}は通常「404」、${error}は「Not Found」となる -->
+	<h1 th:text="${status} + ${error}"></h1>
+
+	<!-- 404エラー専用のメッセージ -->
+	<p>これは、404エラーの専用ページです</p>
+
+	<!-- ログアウト処理を行い、ログイン画面に遷移するフォーム -->
+	<form method="post" th:action="@{/logout}">
+		<button class="btn btn-link" type="submit">ログイン画面に戻る</button>
+	</form>
+</body>
+
+</html>

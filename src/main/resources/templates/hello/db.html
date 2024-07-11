@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Thymeleafを使用するためのxmlns属性を追加 -->
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ResponseSample</title>
+</head>
+
+<body>
+    <h1>HelloResponseDB</h1>
+    <!-- 従業員情報を表示するテーブル -->
+    <table>
+        <tr>
+            <td>ID:</td>
+            <!-- Thymeleafの式を使用して、employeeオブジェクトのemployeeId属性を表示 -->
+            <td th:text="${employee.employeeId}"></td>
+        </tr>
+        <tr>
+            <td>名前:</td>
+            <!-- Thymeleafの式を使用して、employeeオブジェクトのemployeeName属性を表示 -->
+            <td th:text="${employee.employeeName}"></td>
+        </tr>
+        <tr>
+            <td>年齢:</td>
+            <!-- Thymeleafの式を使用して、employeeオブジェクトのemployeeAge属性を表示 -->
+            <td th:text="${employee.employeeAge}"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

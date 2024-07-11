@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="<http://www.thymeleaf.org>" xmlns:layout="<http://www.ultraq.net.nz/thymeleaf/layout>"
+	layout:decorate="~{layout/layout}">
+
+<head>
+	<!-- このヘッダーは空です。共通のhead要素はlayout.htmlで定義されています -->
+</head>
+
+<body>
+	<!-- ヘッダーのフラグメント定義 -->
+	<nav layout:fragment="header" class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-dark">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<!-- アプリケーション名またはロゴ -->
+				<a class="navbar-brand" href="#">SpringSample</a>
+			</div>
+			<!-- ログアウトフォーム -->
+			<form method="post" th:action="@{/logout}">
+				<button class="btn btn-link pull-right navbar-brand" type="submit">
+					ログアウト
+				</button>
+			</form>
+		</div>
+	</nav>
+</body>
+
+</html>

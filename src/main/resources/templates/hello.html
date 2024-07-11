@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- Thymeleafを使用するためのxmlns属性を追加 -->
+<html xmlns:th="<http://www.thymeleaf.org>">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+
+    <!-- 最初のフォーム: テキスト入力を処理 -->
+    <form method="post" action="/hello">
+        入力：<input type="text" name="text1" />
+        <input type="submit" value="クリック" />
+    </form>
+
+    <br />
+
+    <!-- 二つ目のフォーム: データベース検索用 -->
+    <form method="post" action="/hello/db">
+        <!-- th:value属性を使用して、Thymeleafで動的に値を設定可能 -->
+        従業員:<input type="text" name="text2" th:value="${text2_value}" />
+        <input type="submit" value="クリック" />
+    </form>
+</body>
+
+</html>
